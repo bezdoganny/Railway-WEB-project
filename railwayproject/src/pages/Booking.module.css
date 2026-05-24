@@ -1,0 +1,132 @@
+/* Booking.module.css */
+.page {
+  padding: 32px 0 60px;
+}
+
+/* Хлібна крихта */
+.breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  margin-bottom: 24px;
+  color: var(--color-muted);
+}
+
+.breadcrumbLink {
+  color: var(--color-accent-2);
+  transition: color 0.2s;
+}
+
+.breadcrumbLink:hover {
+  color: var(--color-text);
+}
+
+.breadcrumbSep {
+  color: var(--color-border);
+}
+
+.breadcrumbCurrent {
+  color: var(--color-muted-2);
+}
+
+/* Заголовок рейсу */
+.trainHeader {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 36px;
+  flex-wrap: wrap;
+}
+
+.trainTitle {
+  font-family: var(--font-display);
+  font-size: clamp(24px, 4vw, 36px);
+  font-weight: 800;
+  color: var(--color-text);
+  letter-spacing: -0.02em;
+  margin-bottom: 6px;
+}
+
+.arrow {
+  color: var(--color-accent);
+}
+
+.trainMeta {
+  font-size: 14px;
+  color: var(--color-muted-2);
+}
+
+.typeBadge {
+  background: rgba(59,130,246,0.1);
+  border: 1px solid rgba(59,130,246,0.25);
+  color: var(--color-accent-2);
+  padding: 6px 16px;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+/* Двоколонковий лейаут */
+.layout {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+}
+
+@media (min-width: 960px) {
+  .layout {
+    grid-template-columns: 1fr 380px;
+    align-items: start;
+  }
+}
+
+.leftCol {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.rightCol {
+  /* На десктопі "приклеюємо" форму до верху при скролі */
+  position: sticky;
+  top: 80px;
+}
+
+/* 404 */
+.notFound {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  min-height: 60vh;
+  text-align: center;
+  color: var(--color-muted);
+  font-size: 18px;
+}
+
+.notFound span {
+  font-size: 56px;
+}
+
+.notFound h2 {
+  font-family: var(--font-display);
+  font-size: 24px;
+  color: var(--color-text);
+}
+
+.backLink {
+  color: var(--color-accent-2);
+  font-size: 14px;
+  padding: 10px 24px;
+  border: 1px solid var(--color-accent);
+  border-radius: var(--radius-sm);
+  transition: background 0.2s;
+}
+
+.backLink:hover {
+  background: rgba(59,130,246,0.1);
+}

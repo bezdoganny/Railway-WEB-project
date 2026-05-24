@@ -1,0 +1,92 @@
+/* Home.module.css */
+.hero {
+  background: linear-gradient(180deg, rgba(59,130,246,0.06) 0%, transparent 100%);
+  border-bottom: 1px solid var(--color-border);
+  padding: 64px 0 48px;
+  overflow: hidden;
+  position: relative;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  right: -10%;
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, rgba(59,130,246,0.08) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.heroContent {
+  margin-bottom: 40px;
+}
+
+.heroLabel {
+  display: inline-block;
+  background: rgba(59,130,246,0.1);
+  border: 1px solid rgba(59,130,246,0.25);
+  color: var(--color-accent-2);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 5px 14px;
+  border-radius: 20px;
+  margin-bottom: 20px;
+  animation: slideRight 0.5s ease;
+}
+
+.heroTitle {
+  font-family: var(--font-display);
+  font-size: clamp(36px, 6vw, 64px);
+  font-weight: 900;
+  line-height: 1.05;
+  letter-spacing: -0.03em;
+  color: var(--color-text);
+  margin-bottom: 16px;
+  animation: fadeIn 0.6s ease;
+}
+
+.heroAccent {
+  background: linear-gradient(135deg, var(--color-accent), #7c3aed);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.heroSub {
+  font-size: 16px;
+  color: var(--color-muted-2);
+  max-width: 480px;
+  line-height: 1.7;
+  animation: fadeIn 0.7s ease;
+}
+
+.heroStats {
+  display: flex;
+  gap: 32px;
+  flex-wrap: wrap;
+  animation: fadeIn 0.8s ease;
+}
+
+.stat {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.statNum {
+  font-family: var(--font-display);
+  font-size: 28px;
+  font-weight: 900;
+  color: var(--color-text);
+  letter-spacing: -0.02em;
+}
+
+.statLabel {
+  font-size: 12px;
+  color: var(--color-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
