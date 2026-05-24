@@ -1,0 +1,194 @@
+/* TrainCard.module.css */
+.card {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: 24px;
+  transition: transform 0.25s, border-color 0.25s, box-shadow 0.25s;
+  animation: fadeIn 0.4s ease both;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+.card::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--color-accent), #7c3aed);
+  opacity: 0;
+  transition: opacity 0.25s;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  border-color: var(--color-accent);
+  box-shadow: var(--shadow-glow);
+}
+
+.card:hover::before {
+  opacity: 1;
+}
+
+/* Тип потяга — бейдж */
+.typeBadge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+}
+
+.typeBadge.intercity {
+  background: rgba(59,130,246,0.15);
+  color: var(--color-accent-2);
+  border: 1px solid rgba(59,130,246,0.3);
+}
+
+.typeBadge.night {
+  background: rgba(124,58,237,0.15);
+  color: #a78bfa;
+  border: 1px solid rgba(124,58,237,0.3);
+}
+
+.typeBadge.regional {
+  background: rgba(34,197,94,0.12);
+  color: #4ade80;
+  border: 1px solid rgba(34,197,94,0.25);
+}
+
+/* Номер потяга */
+.trainNumber {
+  font-family: var(--font-display);
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--color-muted);
+  margin-bottom: 12px;
+  letter-spacing: 0.04em;
+}
+
+/* Маршрут */
+.route {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.city {
+  flex: 1;
+}
+
+.cityName {
+  font-family: var(--font-display);
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--color-text);
+  letter-spacing: -0.02em;
+}
+
+.cityTime {
+  font-size: 14px;
+  color: var(--color-muted-2);
+  margin-top: 2px;
+}
+
+.routeDivider {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  flex: 1;
+}
+
+.routeLine {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  gap: 6px;
+  color: var(--color-muted);
+}
+
+.routeLine::before,
+.routeLine::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: var(--color-border);
+}
+
+.routeDuration {
+  font-size: 11px;
+  color: var(--color-muted);
+  letter-spacing: 0.05em;
+}
+
+/* Нижня частина картки */
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 16px;
+  border-top: 1px solid var(--color-border);
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.meta {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.metaItem {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12px;
+  color: var(--color-muted-2);
+}
+
+.price {
+  font-family: var(--font-display);
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--color-gold);
+  white-space: nowrap;
+}
+
+.priceLabel {
+  display: block;
+  font-size: 10px;
+  font-weight: 400;
+  color: var(--color-muted);
+  font-family: var(--font-body);
+  text-align: right;
+}
+
+.btn {
+  padding: 10px 24px;
+  background: linear-gradient(135deg, var(--color-accent), #1d4ed8);
+  color: #fff;
+  font-size: 13px;
+  font-weight: 600;
+  border-radius: var(--radius-sm);
+  transition: opacity 0.2s, transform 0.15s;
+  white-space: nowrap;
+}
+
+.btn:hover {
+  opacity: 0.9;
+  transform: translateY(-1px);
+}
+
+.date {
+  font-size: 12px;
+  color: var(--color-muted);
+  margin-bottom: 6px;
+}
