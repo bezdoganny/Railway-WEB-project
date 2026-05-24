@@ -1,0 +1,69 @@
+/* WagonSelector.module.css */
+.section {
+  margin-bottom: 32px;
+}
+
+.sectionTitle {
+  font-family: var(--font-display);
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--color-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-bottom: 16px;
+}
+
+.wagonRow {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.wagonBtn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  padding: 14px 18px;
+  background: var(--color-surface);
+  border: 2px solid var(--color-border);
+  border-radius: var(--radius-md);
+  transition: all 0.2s;
+  min-width: 90px;
+}
+
+.wagonBtn:hover {
+  border-color: var(--color-accent);
+  background: var(--color-surface-2);
+}
+
+.wagonBtn.selected {
+  border-color: var(--color-accent);
+  background: rgba(59,130,246,0.1);
+  box-shadow: 0 0 16px rgba(59,130,246,0.2);
+}
+
+.wagonNumber {
+  font-family: var(--font-display);
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--color-text);
+}
+
+.wagonType {
+  font-size: 11px;
+  color: var(--color-muted-2);
+  text-align: center;
+}
+
+.wagonFree {
+  font-size: 11px;
+  color: var(--color-green);
+  font-weight: 600;
+}
+
+.wagonPrice {
+  font-size: 12px;
+  color: var(--color-gold);
+  font-weight: 600;
+}
